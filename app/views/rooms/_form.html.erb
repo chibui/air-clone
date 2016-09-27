@@ -11,52 +11,45 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
+  <div class="form-group">
+    <%= f.text_field :name, class:"form-control", placeholder:"Name" %>
   </div>
 
-  <div class="field">
-    <%= f.label :accommodates %>
-    <%= f.number_field :accommodates %>
+  <div class="form-group">
+    <%= f.text_area :description, class:"form-control", placeholder:"Description" %>
   </div>
 
-  <div class="field">
-    <%= f.label :bathroom %>
-    <%= f.number_field :bathroom %>
+  <div class="form-group">
+    <%= f.number_field :accommodates, class:"form-control", placeholder:"Accommodates" %>
   </div>
 
-  <div class="field">
-    <%= f.label :price %>
-    <%= f.text_field :price %>
+  <div class="form-group">
+    <%= f.number_field :bathroom, class:"form-control", placeholder:"Bathroom" %>
   </div>
 
-  <div class="field">
-    <%= f.label :kitchen %>
-    <%= f.check_box :kitchen %>
+  <div class="form-group">
+    <%= f.text_field :price, class:"form-control", placeholder:"Price" %>
   </div>
 
-  <div class="field">
-    <%= f.label :internet %>
-    <%= f.check_box :internet %>
+  <div class="form-check">
+    <%= f.label :kitchen, class: "form-check-label" %>
+    <%= f.check_box :kitchen, class: "form-check-input" %>
+
   </div>
 
-  <div class="field">
-    <%= f.label :pets %>
-    <%= f.check_box :pets %>
+  <div class="form-check">
+    <%= f.label :internet, class: "form-check-label" %>
+    <%= f.check_box :internet, class: "form-check-input" %>
   </div>
 
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
+  <div class="form-check">
+    <%= f.label :pets, class: "form-check-label" %>
+    <%= f.check_box :pets, class: "form-check-input" %>
   </div>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-
+<br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class:"btn btn-primary" %>
   </div>
+  <br>
 <% end %>
