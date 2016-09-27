@@ -1,41 +1,36 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Rooms</h1>
+  <% @rooms.each do |room| %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th>Accommodates</th>
-      <th>Bathroom</th>
-      <th>Price</th>
-      <th>Kitchen</th>
-      <th>Internet</th>
-      <th>Pets</th>
-      <th>User</th>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <div class="panel panel-default">
+  <!-- Default panel contents -->
+    <div class="panel-heading"><%= room.name %></div>
+    <div class="panel-body">
+      <p><%= room.description %></p>
+    </div>
 
-  <tbody>
-    <% @rooms.each do |room| %>
-      <tr>
-        <td><%= room.description %></td>
-        <td><%= room.accommodates %></td>
-        <td><%= room.bathroom %></td>
-        <td><%= room.price %></td>
-        <td><%= room.kitchen %></td>
-        <td><%= room.internet %></td>
-        <td><%= room.pets %></td>
-        <td><%= room.user %></td>
-        <td><%= room.name %></td>
-        <td><%= link_to 'Show', room %></td>
-        <td><%= link_to 'Edit', edit_room_path(room) %></td>
-        <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  <!-- List group -->
+      <ul class="list-group">
+        <li class="list-group-item"><%= image_tag(room.picture_url) %></li>
+
+        <li class="list-group-item">Accommodates: <%= room.accommodates %></li>
+        <li class="list-group-item">Bathrooms: <%= room.bathroom %></li>
+        <li class="list-group-item">Price: <%= room.price %></li>
+        <li class="list-group-item">Kitchen: <%= room.kitchen %></li>
+        <li class="list-group-item">Internet: <%= room.internet %></li>
+        <li class="list-group-item">Pets: <%= room.pets %></li>
+        <% if current_user.id = room.user_id%>
+        <li class="list-group-item"><%= link_to 'Show', room %></li>
+        <li class="list-group-item"><%= link_to 'Edit', edit_room_path(room) %></li>
+        <li class="list-group-item"><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+        <% else %>
+        <% end %>
+      </ul>
+    </div>
+
+  <% end %>
+
 </table>
 
 <br>

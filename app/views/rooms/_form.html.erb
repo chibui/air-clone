@@ -20,11 +20,11 @@
   </div>
 
   <div class="form-group">
-    <%= f.number_field :accommodates, class:"form-control", placeholder:"Accommodates" %>
+    <%= f.number_field :accommodates, class:"form-control", placeholder:"Accommodates", min:"0" %>
   </div>
 
   <div class="form-group">
-    <%= f.number_field :bathroom, class:"form-control", placeholder:"Bathroom" %>
+    <%= f.number_field :bathroom, class:"form-control", placeholder:"Bathroom", min:"0" %>
   </div>
 
   <div class="form-group">
@@ -46,8 +46,10 @@
     <%= f.label :pets, class: "form-check-label" %>
     <%= f.check_box :pets, class: "form-check-input" %>
   </div>
-
-<br>
+  <br>
+  <div class="form-group">
+    <%= f.file_field :picture, as: :file %>
+  </div>
   <div class="actions">
     <%= f.submit class:"btn btn-primary" %>
   </div>

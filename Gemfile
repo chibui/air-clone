@@ -16,6 +16,11 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Use carrierwave to manage image attachments
+gem 'carrierwave'
+# Use cloudinary to store images in cloud
+gem 'cloudinary'
+# Use growlyflash for flash messages to user
 gem 'growlyflash'
 # Use devise for user authentication management
 gem 'devise'
