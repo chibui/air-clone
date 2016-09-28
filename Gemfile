@@ -17,7 +17,7 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 
 # Use carrierwave to manage image attachments
-gem 'carrierwave'
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 # Use cloudinary to store images in cloud
 gem 'cloudinary'
 # Use growlyflash for flash messages to user

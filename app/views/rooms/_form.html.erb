@@ -47,8 +47,14 @@
     <%= f.check_box :pets, class: "form-check-input" %>
   </div>
   <br>
+  <p>
+    Drag and drop file onto "choose file"
+  </p>
+  <p>
+    or CTRL and Click multiple files
+  </p>
   <div class="form-group">
-    <%= f.file_field :picture, as: :file %>
+    <%= f.file_field :images, multiple: :true %>
   </div>
   <div class="actions">
     <%= f.submit class:"btn btn-primary" %>

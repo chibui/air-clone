@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<% @room.images_urls.each do |gallery| %>
+<%= image_tag(gallery) %>
+<% end %>
+
 <p>
   <strong>Description:</strong>
   <%= @room.description %>
@@ -37,7 +41,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @room.user %>
+  <%= @room.user.firstname %>
 </p>
 
 <p>

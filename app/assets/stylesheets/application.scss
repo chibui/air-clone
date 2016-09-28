@@ -16,3 +16,15 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "growlyflash";
+
+.cover-img-container .cover-img {
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-color: #currentColor;
+  height: 100%;
+  
+}

@@ -12,7 +12,8 @@
 
   <!-- List group -->
       <ul class="list-group">
-        <li class="list-group-item"><%= image_tag(room.picture_url) %></li>
+        <li class="list-group-item"><%= image_tag(room.images_urls.first) %>
+        </li>
 
         <li class="list-group-item">Accommodates: <%= room.accommodates %></li>
         <li class="list-group-item">Bathrooms: <%= room.bathroom %></li>
