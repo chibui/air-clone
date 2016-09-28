@@ -5,4 +5,10 @@ class Room < ApplicationRecord
   belongs_to :user
   serialize :images, Array
   mount_uploaders :images, ImageUploader
+
+  def self.search(search)
+    #performs search on name and content fields
+    where("name LIKE ?", "%#{search}%")
+  end
+
 end
