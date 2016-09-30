@@ -1,0 +1,35 @@
+<%= form_for(booking) do |f| %>
+  <% if booking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
+
+      <ul>
+      <% booking.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- passes a room_id via a hidden_field, should use validations for security -->
+  <%= f.hidden_field :room_id, :value => room.id %>
+
+  <div class="field">
+    <%= f.label :startdate %>
+    <%= f.date_select :startdate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :enddate %>
+    <%= f.date_select :enddate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :guestcount %>
+    <%= f.number_field :guestcount %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

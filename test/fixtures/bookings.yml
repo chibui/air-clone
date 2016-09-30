@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  room: one
+  user: one
+  startdate: 2016-09-30
+  enddate: 2016-09-30
+  guestcount: 1
+  approved: false
+
+two:
+  room: two
+  user: two
+  startdate: 2016-09-30
+  enddate: 2016-09-30
+  guestcount: 1
+  approved: false
