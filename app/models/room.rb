@@ -7,8 +7,8 @@ class Room < ApplicationRecord
   mount_uploaders :images, ImageUploader
 
   def self.search(search)
-    #performs search on name and content fields
-    where("name LIKE ?", "%#{search}%")
+    #performs search on name and description fields
+    where("name LIKE ? or description LIKE ?", "%#{search}%", "%#{search}%")
   end
 
 end

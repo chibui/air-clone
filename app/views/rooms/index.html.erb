@@ -1,14 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<%= form_tag(rooms_path, :method => "get", id: "search-form") do %>
-<%= text_field_tag :search, params[:search], placeholder: "Search" %>
-<%= submit_tag "Search" %>
-<% end %>
+
 
 <% if @rooms.present? %>
-  <%= render @rooms %>
+  <% @rooms %>
 <% else %>
-  <p>There are no listing matching <%= params[:search] %>. </p>
+  <p>There are no listing matching <%= params[:search] %> </p>
 <% end %>
 
 <h1>Rooms</h1>
