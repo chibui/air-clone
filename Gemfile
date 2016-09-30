@@ -16,7 +16,9 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-
+# Use stripe for payment processing
+gem 'stripe'
+# Use font-awesome-rails for icons
 gem 'font-awesome-rails'
 # Use carrierwave to manage image attachments
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'

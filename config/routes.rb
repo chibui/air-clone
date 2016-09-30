@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :bookings
   resources :rooms
+  resources :charges
   devise_for :users
   root 'pages#home'
 
